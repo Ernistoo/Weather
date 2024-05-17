@@ -22,6 +22,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/weather', function () {
+    return view('weather');
+})->middleware(['auth', 'verified'])->name('weather');
+
 
 
 Route::middleware('auth')->group(function () {
